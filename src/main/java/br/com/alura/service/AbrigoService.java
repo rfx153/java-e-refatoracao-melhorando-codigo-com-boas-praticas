@@ -29,7 +29,6 @@ public AbrigoService(ClientHttpConfiguration client){
         String uri = "http://localhost:8080/abrigos";
         HttpResponse<String> response = client.dispararRequisicaoGet(uri);
         String responseBody = response.body();
-        new ObjectMapper()
         //JsonArray jsonArray = JsonParser.parseString(responseBody).getAsJsonArray();
         Abrigo[] abrigos = new ObjectMapper().readValue(responseBody, Abrigo[].class);
         List<Abrigo> abrigoList = Arrays.stream(abrigos).toList();
