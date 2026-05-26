@@ -50,4 +50,11 @@ public Abrigo(String nome, String telefone, String email){
     public void setPets(Pet[] pets) {
         this.pets = pets;
     }
+    //simulando o json com o toString() 
+    @Override
+    public String toString() {
+        return """
+                     "id":%s,"nome":"%s","telefone":"%s","email":"%s"
+                     """.formatted(this.id, this.nome, this.telefone, this.email);
+}
 }
