@@ -1,6 +1,10 @@
 package br.com.alura.domain;
 
 public class Abrigo {
+
+public Abrigo() {
+    
+}    
 public Abrigo(String nome, String telefone, String email){
     this.nome = nome;
     this.telefone = telefone;
@@ -11,8 +15,10 @@ public Abrigo(String nome, String telefone, String email){
     private String nome;
     private String telefone;
     private String email;
+    private Pet[] pets;
 
    
+    
     
     public String getNome() {
         return nome;
@@ -37,5 +43,11 @@ public Abrigo(String nome, String telefone, String email){
     }
     public void setId(Long id) {
         this.id = id;
+    }
+    public Pet[] getPets() {
+        return pets;
+    }
+    public void setPets(Pet[] pets) {
+        this.pets = pets;
     }
 }
